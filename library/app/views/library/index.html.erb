@@ -1,5 +1,5 @@
 <h1>圖書館管理系統</h1>
- <%= link_to "新增書本", new_book_path %>
+ <%= link_to "新增書本", new_library_path %>
 
   <table>
     <thead>
@@ -11,12 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @books.each do |book| %>
+      <% @book.each do |library| %>
       <tr>
-        <td><%= book.name %></td>
-        <td><%= book.introduction %></td>
-        <td><%= book.actor %></td>
-        <td><%= book.price %></td>
+        <td><%= library.name %></td>
+        <td><%= library.introduction %></td>
+        <td><%= library.actor %></td>
+        <td><%= library.price %></td>
       </tr>
       <% end %>
     </tbody>

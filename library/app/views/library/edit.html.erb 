@@ -1,0 +1,27 @@
+<h1>候選人列表</h1>
+
+  <%= link_to "新增書籍", new_library_path %>
+
+  <table>
+    <thead>
+      <tr>
+        <td>書名</td>
+        <td>介紹</td>
+        <td>作者</td>
+        <td>價格</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each do |book| %>
+      <tr>
+        <td><%= library.name %></td>
+        <td><%= library.introduction %></td>
+        <td><%= library.actor %></td>
+        <td><%= library.price %></td>
+        <td>
+          <%= link_to "編輯", edit_library_path(candidate) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
