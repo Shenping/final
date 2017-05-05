@@ -28,3 +28,17 @@ end
       render 'edit'
     end
   end
+
+ def destroy
+    @book.destroy
+    redirect_book_path, notice:"delete"
+  end
+
+ private
+  def
+    book_params
+    params.require("book").permit(:name,:introduction,:actor)
+  end
+  
+end
+
