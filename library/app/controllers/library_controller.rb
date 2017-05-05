@@ -40,5 +40,4 @@ end
     params.require("book").permit(:name,:introduction,:actor)
   end
   
-end
 
