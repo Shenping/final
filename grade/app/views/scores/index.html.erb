@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
+<TITLE>國立台北商業大學 成績單</TITLE>
+<h1><B>成績列表</B></h1>
+<%= link_to '新增學生', new_score_path %>
+<h6>分數級別說明:90分以上S/80~89級:A/70~79:B級/60~69:C級/未滿60:D級</h6>
 
-<h1>Scores</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Number</th>
-      <th>Scores</th>
-      <th>Deal</th>
+      <th>姓名</th>
+      <th>學號</th>
+      <th>分數</th>
+      <th>處理</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,10 +21,8 @@
         <td><%= score.name %></td>
         <td><%= score.number %></td>
         <td><%= score.scores %></td>
-        <td><%= score.deal %></td>
-        <td><%= link_to 'Show', score %></td>
-        <td><%= link_to 'Edit', edit_score_path(score) %></td>
-        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '處理', edit_score_path(score) %></td>
+        <td><%= link_to '刪除', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Score', new_score_path %>
+
